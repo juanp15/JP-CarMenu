@@ -38,6 +38,7 @@ function AllDoors()
         TriggerServerEvent('JP_CarMenu:ChatMessage', PlayerServerId, _'Not_Vehicle')
 
     end
+    
 end
 
 function Door(Door)

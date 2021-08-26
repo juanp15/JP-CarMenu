@@ -17,6 +17,8 @@ local menu4 = MenuV:CreateMenu(_'PrinMenu_ExtrasBtn', _'PrinMenu_ExtrasBtnDesc',
 local menu5 = MenuV:CreateMenu(_'PrinMenu_LiveriesBtn', _'PrinMenu_LiveriesBtnDesc', Config_JP.MenusPosition, 255, 0, 0)
 local menu6 = MenuV:CreateMenu(_'DoorsMenu_FrontDoors', _'DoorsMenu_FrontDoorsDesc', Config_JP.MenusPosition, 255, 0, 0)
 local menu7 = MenuV:CreateMenu(_'DoorsMenu_RearDoors', _'DoorsMenu_RearDoorsDesc', Config_JP.MenusPosition, 255, 0, 0)
+local menu8 = MenuV:CreateMenu(_'WindowsMenu_FrontWindows', _'WindowsMenu_FrontWindowsDesc', Config_JP.MenusPosition, 255, 0, 0)
+local menu9 = MenuV:CreateMenu(_'WindowsMenu_RearWindows', _'WindowsMenu_RearWindowsDesc', Config_JP.MenusPosition, 255, 0, 0)
 
 --- Buttons
 -- Princ. Menu
@@ -38,6 +40,13 @@ local hood_button = menu2:AddButton({ icon = '🚪', label = _'DoorsMenu_HoodBtn
 local trunk_button = menu2:AddButton({ icon = '🚪', label = _'DoorsMenu_TrunkBtn', description = _'DoorsMenu_TrunkBtnDesc'})
 
 -- Windows Menu
+local allwindows_button = menu3:AddButton({ icon = '🌁', label = _'WindowsMenu_AllWindowsBtn', description = _'WindowsMenu_AllWindowsBtnDesc'})
+local windows_to_frontwindows_button = menu3:AddButton({ icon = '🌁', label = _'WindowsMenu_FrontWindows', value = menu8, description = _'WindowsMenu_FrontWindowsDesc' })
+local frontleftwindow_button = menu8:AddButton({ icon = '🌁', label = _'WindowsMenu_FrontLeftWindowBtn', description = _'WindowsMenu_FrontLeftWindowBtnDesc'})
+local frontrightwindow_button = menu8:AddButton({ icon = '🌁', label = _'WindowsMenu_FrontRightWindowBtn', description = _'WindowsMenu_FrontRightWindowBtnDesc'})
+local windows_to_rearwindows_button = menu3:AddButton({ icon = '🌁', label = _'WindowsMenu_RearWindows', value = menu9, description = _'WindowsMenu_RearWindowsDesc' })
+local rearleftwindow_button = menu9:AddButton({ icon = '🌁', label = _'WindowsMenu_RearLeftWindowBtn', description = _'WindowsMenu_RearLeftWindowBtnDesc'})
+local rearrightwindow_button = menu9:AddButton({ icon = '🌁', label = _'WindowsMenu_RearRightWindowBtn', description = _'WindowsMenu_RearRightWindowBtnDesc'})
 
 -- Extras Menu
 
@@ -107,6 +116,46 @@ end)
 trunk_button:On('select', function(item)
 
     Door(5)
+
+end)
+--------------------------------------------
+
+-- Up/Down All Windows
+allwindows_button:On('select', function(item)
+
+    AllWindows()
+
+end)
+--------------------------------------------
+
+-- Up/Down Front Left Window
+frontleftwindow_button:On('select', function(item)
+
+    Window(0)
+
+end)
+--------------------------------------------
+
+-- Up/Down Front Right Window
+frontrightwindow_button:On('select', function(item)
+
+    Window(1)
+
+end)
+--------------------------------------------
+
+-- Up/Down Rear Left Window
+rearleftwindow_button:On('select', function(item)
+
+    Window(2)
+
+end)
+--------------------------------------------
+
+-- Up/Down Rear Right Window
+rearrightwindow_button:On('select', function(item)
+
+    Window(3)
 
 end)
 --------------------------------------------

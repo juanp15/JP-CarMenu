@@ -22,6 +22,7 @@ client_scripts {
   'Config/Config_JP.lua',
   'Client/Engine_C.lua',
   'Client/Doors_C.lua',
+  'Client/Windows_C.lua',
   '@menuv/menuv.lua',
   'Menu/JP-CarMenu.lua'
 }
