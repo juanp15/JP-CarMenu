@@ -3,6 +3,7 @@
 -- License:
 -- url
 -- Author: Juanp
+-- Discord: https://discord.gg/Mm5YWy7BqY
 -- Name: JP_CarMenu
 -- Version: 1.0.0
 -- Description: JP Car Menu
@@ -20,13 +21,11 @@ function Engine()
 
             SetVehicleEngineOn(Vehicle, false, false, false)
             SetVehicleUndriveable(Vehicle, true)
-            TriggerServerEvent('JP_CarMenu:ChatMessage', PlayerServerId, _'Engine_Off')
 
         else
 
             SetVehicleUndriveable(Vehicle, false)
             SetVehicleEngineOn(Vehicle, true, false, false)
-            TriggerServerEvent('JP_CarMenu:ChatMessage', PlayerServerId, _'Engine_On')
 
         end
 

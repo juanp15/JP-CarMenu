@@ -3,6 +3,7 @@
 -- License:
 -- url
 -- Author: Juanp
+-- Discord: https://discord.gg/Mm5YWy7BqY
 -- Name: JP_CarMenu
 -- Version: 1.0.0
 -- Description: JP Car Menu

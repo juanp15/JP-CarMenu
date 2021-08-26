@@ -3,6 +3,7 @@
 -- License:
 -- url
 -- Author: Juanp
+-- Discord: https://discord.gg/Mm5YWy7BqY
 -- Name: JP_CarMenu
 -- Version: 1.0.0
 -- Description: JP Car Menu
@@ -20,6 +21,7 @@ locale      'en'
 client_scripts {
   'Config/Config_JP.lua',
   'Client/Engine_C.lua',
+  'Client/Doors_C.lua',
   '@menuv/menuv.lua',
   'Menu/JP-CarMenu.lua'
 }
