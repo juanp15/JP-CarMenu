@@ -160,6 +160,111 @@ rearrightwindow_button:On('select', function(item)
 end)
 --------------------------------------------
 
+-- Extras Menu
+menu4:On('open', function(m)
+
+    m:ClearItems()
+    local Player = GetPlayerPed(PlayerId())
+    local PlayerServerId = GetPlayerServerId(PlayerId())
+    local Vehicle = GetVehiclePedIsIn(Player, false)
+    local C = 0
+
+    if IsPedInAnyVehicle(Player, 0) then
+
+        for i = 0, 15 do
+
+            if DoesExtraExist(Vehicle, i) then
+
+                C = C + 1
+
+                if IsVehicleExtraTurnedOn(Vehicle, i) then
+                    
+                    m:AddButton({ icon = '✔️', label = ('Extra ' .. i), value = i, description = _'ExtrasMenu_ActivateBtn'
+                    }):On('select', function(item)
+
+                        if IsVehicleExtraTurnedOn(Vehicle, i) then
+
+                            SetVehicleExtra(Vehicle, item.Value, 1)
+
+                            if Config_JP.RepairAfterSetExtra then
+                                
+                                SetVehicleFixed(Vehicle)
+
+                            end
+
+                            item.Icon = '❌'
+
+                        elseif not IsVehicleExtraTurnedOn(Vehicle, i) then
+
+                            SetVehicleExtra(Vehicle, item.Value, 0)
+
+                            if Config_JP.RepairAfterSetExtra then
+                                
+                                SetVehicleFixed(Vehicle)
+
+                            end
+
+                            item.Icon = '✔️'
+
+                        end
+
+                    end)
+
+                elseif not IsVehicleExtraTurnedOn(Vehicle, i) then
+
+                    m:AddButton({ icon = '❌', label = ('Extra ' .. i), value = i, description = _'ExtrasMenu_ActivateBtn'
+                    }):On('select', function(item)
+
+                        if IsVehicleExtraTurnedOn(Vehicle, i) then
+
+                            SetVehicleExtra(Vehicle, item.Value, 1)
+
+                            if Config_JP.RepairAfterSetExtra then
+                                
+                                SetVehicleFixed(Vehicle)
+
+                            end
+
+                            item.Icon = '❌'
+                            
+                        elseif not IsVehicleExtraTurnedOn(Vehicle, i) then
+
+                            SetVehicleExtra(Vehicle, item.Value, 0)
+
+                            if Config_JP.RepairAfterSetExtra then
+                                
+                                SetVehicleFixed(Vehicle)
+
+                            end
+
+                            item.Icon = '✔️'
+
+                        end
+
+                    end)
+
+                end
+
+            else
+                
+                if i > 14 and C < 1 then
+                   
+                    m:AddButton({ icon = '❌', label = (_'ExtrasMenu_DisabledBtnDesc'), description = _'ExtrasMenu_DisabledBtnDesc', disabled = true })
+
+                end
+
+            end
+
+        end
+
+    else
+
+        TriggerServerEvent('JP_CarMenu:ChatMessage', PlayerServerId, _'Not_Vehicle')
+
+    end
+end)
+--------------------------------------------
+
 -- Open Menu With Key
 Citizen.CreateThread(function()
     while true do

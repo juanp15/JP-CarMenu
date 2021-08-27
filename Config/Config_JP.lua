@@ -14,5 +14,6 @@ Config_JP = {
     -- Idiom Config in fxmanifest
     OpenKey = 344, -- F11 Default
     MenusPosition = 'topright',
+    RepairAfterSetExtra = true,
     ---------------------------------------------------------------------------------------
 }

@@ -60,5 +60,10 @@ locale 'en'
     : set 'WindowsMenu_RearRightWindowBtn'       : label 'Rear Right Window'
     : set 'WindowsMenu_RearRightWindowBtnDesc'   : label 'Up/Down Rear Right Window'
 
+    -- Extras Menu
+    : set 'ExtrasMenu_ActivateBtn'               : label 'Activate/Deactivate Extra'
+    : set 'ExtrasMenu_DisabledBtn'               : label 'No Extras'
+    : set 'ExtrasMenu_DisabledBtnDesc'           : label 'The Vehicle haven´t Extras'
+
     -- Chat Messages
     : set 'Not_Vehicle'                          : label 'You are not in a vehicle'
