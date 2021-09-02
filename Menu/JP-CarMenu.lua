@@ -48,13 +48,6 @@ local windows_to_rearwindows_button = menu3:AddButton({ icon = '🌁', label = _
 local rearleftwindow_button = menu9:AddButton({ icon = '🌁', label = _'WindowsMenu_RearLeftWindowBtn', description = _'WindowsMenu_RearLeftWindowBtnDesc'})
 local rearrightwindow_button = menu9:AddButton({ icon = '🌁', label = _'WindowsMenu_RearRightWindowBtn', description = _'WindowsMenu_RearRightWindowBtnDesc'})
 
--- Extras Menu
-
--- Liveries Menu
-
-
-
-
 --- Events
 -- Start/Stop Engine
 engine_button:On('select', function(item)
@@ -254,6 +247,95 @@ menu4:On('open', function(m)
                 end
 
             end
+
+        end
+
+    else
+        
+        TriggerServerEvent('JP_CarMenu:ChatMessage', PlayerServerId, _'Not_Vehicle')
+
+    end
+end)
+--------------------------------------------
+
+-- Liveries Menu
+menu5:On('open', function(m)
+
+    m:ClearItems()
+    local Player = GetPlayerPed(PlayerId())
+    local PlayerServerId = GetPlayerServerId(PlayerId())
+    local Vehicle = GetVehiclePedIsIn(Player, false)
+    local Liveries = GetVehicleLiveryCount(Vehicle)
+
+    if IsPedInAnyVehicle(Player, 0) then
+
+        for i = 0, Liveries do
+
+            if i == GetVehicleLivery(Vehicle) then
+                
+                m:AddButton({ label = ('Livery ' .. i), value = i, description = _'ExtrasMenu_ActivateBtn'
+                }):On('select', function(item)
+
+                    if GetVehicleLivery(Vehicle) == item.Value then
+
+                        SetVehicleLivery(Vehicle, 0)
+
+                        if Config_JP.RepairAfterSetLivery then
+                            
+                            SetVehicleFixed(Vehicle)
+
+                        end
+
+                    else
+
+                        SetVehicleLivery(Vehicle, item.Value)
+
+                        if Config_JP.RepairAfterSetLivery then
+                            
+                            SetVehicleFixed(Vehicle)
+
+                        end
+
+                    end
+
+                end)
+
+            else
+
+                m:AddButton({ label = ('Livery ' .. i), value = i, description = _'ExtrasMenu_ActivateBtn'
+                }):On('select', function(item)
+
+                    if GetVehicleLivery(Vehicle) == item.Value then
+
+                        SetVehicleLivery(Vehicle, 0)
+
+                        if Config_JP.RepairAfterSetLivery then
+                            
+                            SetVehicleFixed(Vehicle)
+
+                        end
+
+                    else
+
+                        SetVehicleLivery(Vehicle, item.Value)
+
+                        if Config_JP.RepairAfterSetLivery then
+                            
+                            SetVehicleFixed(Vehicle)
+
+                        end
+
+                    end
+
+                end)
+
+            end
+
+        end
+
+        if Liveries == -1 then
+                
+            m:AddButton({ icon = '❌', label = (_'ExtrasMenu_DisabledBtnDesc'), description = _'ExtrasMenu_DisabledBtnDesc', disabled = true })
 
         end
 

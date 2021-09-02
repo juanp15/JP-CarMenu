@@ -15,5 +15,6 @@ Config_JP = {
     OpenKey = 344, -- F11 Default
     MenusPosition = 'topright',
     RepairAfterSetExtra = true,
+    RepairAfterSetLivery = true,
     ---------------------------------------------------------------------------------------
 }

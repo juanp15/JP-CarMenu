@@ -63,7 +63,7 @@ locale 'en'
     -- Extras Menu
     : set 'ExtrasMenu_ActivateBtn'               : label 'Activate/Deactivate Extra'
     : set 'ExtrasMenu_DisabledBtn'               : label 'No Extras'
-    : set 'ExtrasMenu_DisabledBtnDesc'           : label 'The Vehicle haven´t Extras'
+    : set 'ExtrasMenu_DisabledBtnDesc'           : label 'This vehicle has no extras available'
 
     -- Chat Messages
     : set 'Not_Vehicle'                          : label 'You are not in a vehicle'

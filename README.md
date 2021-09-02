@@ -1,10 +1,14 @@
-# JP CarMenu V1.1.0 | Car Menu for fivem | Standalone/ESX
+# JP CarMenu V1.1.0 | Car Menu for fivem | Standalone
 
 ## Discord
 - https://discord.gg/Mm5YWy7BqY
 
 ## Features
-- Noclip
+- Start/Stop Engine
+- Up/Down Windows
+- Open/Close Doors
+- Extras Menu
+- Liveries Menu
 
 ## Dependencies
 - menuv
@@ -14,4 +18,4 @@
 - Spanish
 
 ## Future Updates
-- Discord Logs
+- Change Seat
