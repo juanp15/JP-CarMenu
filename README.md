@@ -1,4 +1,4 @@
-# JP CarMenu V1.1.0 | Car Menu for fivem | Standalone
+# JP CarMenu V1.0.0 | Car Menu for fivem | Standalone
 
 ## Discord
 - https://discord.gg/Mm5YWy7BqY
