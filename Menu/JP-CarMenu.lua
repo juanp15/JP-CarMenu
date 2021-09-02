@@ -22,11 +22,11 @@ local menu9 = MenuV:CreateMenu(_'WindowsMenu_RearWindows', _'WindowsMenu_RearWin
 
 --- Buttons
 -- Princ. Menu
-local engine_button = menu:AddButton({ icon = '🛫', label = _'PrinMenu_EngineBtn', description = _'PrinMenu_EngineBtnDesc'})
+local engine_button = menu:AddButton({ icon = '⚙️', label = _'PrinMenu_EngineBtn', description = _'PrinMenu_EngineBtnDesc'})
 local princ_to_doors_button = menu:AddButton({ icon = '🚪', label = _'PrinMenu_DoorsBtn', value = menu2, description = _'PrinMenu_DoorsBtnDesc' })
-local princ_to_windows_button = menu:AddButton({ icon = '👫', label = _'PrinMenu_WindowsBtn', value = menu3, description = _'PrinMenu_WindowsBtnDesc' })
+local princ_to_windows_button = menu:AddButton({ icon = '🪟', label = _'PrinMenu_WindowsBtn', value = menu3, description = _'PrinMenu_WindowsBtnDesc' })
 local princ_to_extras_button = menu:AddButton({ icon = '🔧', label = _'PrinMenu_ExtrasBtn', value = menu4, description = _'PrinMenu_ExtrasBtnDesc' })
-local princ_to_liveries_button = menu:AddButton({ icon = '🔧', label = _'PrinMenu_LiveriesBtn', value = menu5, description = _'PrinMenu_LiveriesBtnDesc' })
+local princ_to_liveries_button = menu:AddButton({ icon = '✒️', label = _'PrinMenu_LiveriesBtn', value = menu5, description = _'PrinMenu_LiveriesBtnDesc' })
 
 -- Doors Menu
 local alldoors_button = menu2:AddButton({ icon = '🚪', label = _'DoorsMenu_AllDoorsBtn', description = _'DoorsMenu_AllDoorsBtnDesc'})
@@ -40,13 +40,13 @@ local hood_button = menu2:AddButton({ icon = '🚪', label = _'DoorsMenu_HoodBtn
 local trunk_button = menu2:AddButton({ icon = '🚪', label = _'DoorsMenu_TrunkBtn', description = _'DoorsMenu_TrunkBtnDesc'})
 
 -- Windows Menu
-local allwindows_button = menu3:AddButton({ icon = '🌁', label = _'WindowsMenu_AllWindowsBtn', description = _'WindowsMenu_AllWindowsBtnDesc'})
-local windows_to_frontwindows_button = menu3:AddButton({ icon = '🌁', label = _'WindowsMenu_FrontWindows', value = menu8, description = _'WindowsMenu_FrontWindowsDesc' })
-local frontleftwindow_button = menu8:AddButton({ icon = '🌁', label = _'WindowsMenu_FrontLeftWindowBtn', description = _'WindowsMenu_FrontLeftWindowBtnDesc'})
-local frontrightwindow_button = menu8:AddButton({ icon = '🌁', label = _'WindowsMenu_FrontRightWindowBtn', description = _'WindowsMenu_FrontRightWindowBtnDesc'})
-local windows_to_rearwindows_button = menu3:AddButton({ icon = '🌁', label = _'WindowsMenu_RearWindows', value = menu9, description = _'WindowsMenu_RearWindowsDesc' })
-local rearleftwindow_button = menu9:AddButton({ icon = '🌁', label = _'WindowsMenu_RearLeftWindowBtn', description = _'WindowsMenu_RearLeftWindowBtnDesc'})
-local rearrightwindow_button = menu9:AddButton({ icon = '🌁', label = _'WindowsMenu_RearRightWindowBtn', description = _'WindowsMenu_RearRightWindowBtnDesc'})
+local allwindows_button = menu3:AddButton({ icon = '🪟', label = _'WindowsMenu_AllWindowsBtn', description = _'WindowsMenu_AllWindowsBtnDesc'})
+local windows_to_frontwindows_button = menu3:AddButton({ icon = '🪟', label = _'WindowsMenu_FrontWindows', value = menu8, description = _'WindowsMenu_FrontWindowsDesc' })
+local frontleftwindow_button = menu8:AddButton({ icon = '🪟', label = _'WindowsMenu_FrontLeftWindowBtn', description = _'WindowsMenu_FrontLeftWindowBtnDesc'})
+local frontrightwindow_button = menu8:AddButton({ icon = '🪟', label = _'WindowsMenu_FrontRightWindowBtn', description = _'WindowsMenu_FrontRightWindowBtnDesc'})
+local windows_to_rearwindows_button = menu3:AddButton({ icon = '🪟', label = _'WindowsMenu_RearWindows', value = menu9, description = _'WindowsMenu_RearWindowsDesc' })
+local rearleftwindow_button = menu9:AddButton({ icon = '🪟', label = _'WindowsMenu_RearLeftWindowBtn', description = _'WindowsMenu_RearLeftWindowBtnDesc'})
+local rearrightwindow_button = menu9:AddButton({ icon = '🪟', label = _'WindowsMenu_RearRightWindowBtn', description = _'WindowsMenu_RearRightWindowBtnDesc'})
 
 --- Events
 -- Start/Stop Engine
